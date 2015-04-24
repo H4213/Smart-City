@@ -13,13 +13,7 @@ from controler import control
 
 from model.modele import User, Marker
 
-from xml.etree import ElementTree
-from xml.etree.ElementTree import Element
-from xml.etree.ElementTree import SubElement
-
-
 app = Flask(__name__)
-db = control.connectToDatabase()
 
 @app.route('/', methods=('GET', 'POST'))
 def index():
@@ -64,7 +58,7 @@ def test():
     return control.test(request.form)
   return "false"
 
-@app.route('/test2', methods=('GET', 'POST'))
+"""@app.route('/test2', methods=('GET', 'POST'))
 def test2():
   marker = Marker()
   marker.title = "le titre"
@@ -72,7 +66,7 @@ def test2():
   db.session.add(marker)
   db.session.commit()
 
-  return str(marker.id)
+  return str(marker.id)"""
 
 
 @app.errorhandler(404)

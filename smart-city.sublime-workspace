@@ -107,7 +107,15 @@
 			"file": "app.py",
 			"settings":
 			{
-				"buffer_size": 1785,
+				"buffer_size": 1635,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "model/modele.py",
+			"settings":
+			{
+				"buffer_size": 1686,
 				"line_ending": "Unix"
 			}
 		},
@@ -296,8 +304,8 @@
 						"selection":
 						[
 							[
-								571,
-								571
+								128,
+								128
 							]
 						],
 						"settings":
@@ -306,7 +314,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 102.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -316,15 +324,15 @@
 					"file": "app.py",
 					"settings":
 					{
-						"buffer_size": 1785,
+						"buffer_size": 1635,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								869,
-								869
+								289,
+								289
 							]
 						],
 						"settings":
@@ -334,7 +342,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 255.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -342,11 +350,39 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 2,
+					"file": "model/modele.py",
+					"settings":
+					{
+						"buffer_size": 1686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "templates/marker.html",
 					"settings":
 					{
@@ -372,7 +408,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "templates/user.html",
 					"settings":
 					{
@@ -428,7 +464,7 @@
 		"cols":
 		[
 			0.0,
-			0.66975308642,
+			0.531822051937,
 			1.0
 		],
 		"rows":
