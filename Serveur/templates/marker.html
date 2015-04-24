@@ -1,0 +1,12 @@
+{
+"marker":[
+{% for marker in markers %}
+	{"id":"{{ str(markers.id) }}", 
+	"title":"{{ markers.title }}", 
+	"cathegorie":"{{ markers.cathegorie }}", 
+	"description":"{{ markers.description }}",
+	"lng":"{{ markers.lng }}",
+	"lat":"{{ markers.lat }}"}	
+{% endfor %}
+]
+}

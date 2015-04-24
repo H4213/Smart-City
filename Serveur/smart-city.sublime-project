@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "controler"
+		},
+		{
+			"path": "model"
+		},
+		{
+			"path": "static"
+		},
+		{
+			"path": "templates"
+		}
+	]
+}

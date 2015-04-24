@@ -1,0 +1,9 @@
+{
+"user":[
+{% for user in users %}
+	{"id":"{{ str(user.id) }}", 
+	"pseudo":"{{ user.pseudo }}", 
+	"passw":"{{ user.passw }}"}	
+{% endfor %}
+]
+}
