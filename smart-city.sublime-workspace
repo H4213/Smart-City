@@ -306,7 +306,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 102.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -428,7 +428,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.66975308642,
 			1.0
 		],
 		"rows":
