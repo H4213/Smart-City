@@ -19,28 +19,25 @@ def marker(cathegorie):
 	request for all markers
 	"""
 	if (cathegorie):
-		mes_Markers = Marker.query.filter_by(cathegorie=cathegorie).all()
+		items = Marker.query.filter_by(cathegorie=cathegorie).all()
 	else:
-		mes_Markers = Marker.query.all()
+		items = Marker.query.all()
 
-	if not(mes_Markers):
+	if not(items):
 		print "Markers vides"
 
-	return render_template('marker.html', markers=mes_Markers)
+	return jsonify(markers=[item.serialize() for item in items])
 
 def displayUser():
 	print "displayUser()"
 
-	users = User.query.all()
-
-	for user in users:
-		print user.pseudo
+	items = User.query.all()
 
 	print "query faite"
 
-	if users :
+	if items :
 		print "users non vide"
-		return render_template('user.html', users = users)
+		return jsonify(users=[item.serialize() for item in items])
 
 	print "user vide"
 	return "-1"
@@ -71,8 +68,7 @@ def addMarker(form):
 		db.session.add(marker)
 		db.session.commit()
 		
-
-		return str(marker.id) 
+		return jsonify(marker = marker.serialize) 
 		
 	return "Invalid Parameters"
 
@@ -90,7 +86,7 @@ def addUser(form):
 		db.session.add(user)
 		db.session.commit()
 
-		return str(user.id) 
+		return jsonify(id=user.id, pseudo=user.pseudo)
 
 	return "Invalid Parameters"
 
