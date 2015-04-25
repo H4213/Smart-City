@@ -32,6 +32,7 @@ def marker(cathegorie = None):
 
 @app.route('/user')
 def user():
+  print "user\n"
   return control.displayUser()
 
 #renvoie l'id après l'authentification de l'utilisateur

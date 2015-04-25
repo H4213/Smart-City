@@ -1,4 +1,6 @@
-from model import modele 
+from model import modele
+from model.modele import User, Marker
+from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -23,10 +25,20 @@ def marker(cathegorie):
 	return render_template('marker.html', markers=mes_Markers)
 
 def displayUser():
+	print "displayUser()\n"
 
 	users = User.query.all()
 
-	return render_template('user.html', users = users)
+	print "query faite"
+
+	if users :
+		print "users non vide\n"
+		return render_template('user.html', users = users)
+
+	print "user vide\n"
+	return "-1"
+
+	
 
 def authentification(form):
 	user = User.query.filter_by(pseudo=form.pseudo, passw=form.passw).first()
