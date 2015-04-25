@@ -1,6 +1,6 @@
 from model import modele
 from model.modele import User, Marker
-from flask import Flask, flash, render_template, request, session
+from flask import Flask, flash, render_template, request, session, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
