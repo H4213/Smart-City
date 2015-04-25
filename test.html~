@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <form action="https://smart-city-h4213.herokuapp.com/test" id="payment-form" autocomplete="on" method="POST">
+        <form action="http://127.0.0.1:5000/test" id="payment-form" autocomplete="on" method="POST">
             <input id="name" name="name" type="text" class="">
 
         </form>

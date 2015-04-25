@@ -37,17 +37,23 @@ def user():
 #renvoie l'id après l'authentification de l'utilisateur
 @app.route('/auth', methods=('GET', 'POST'))
 def auth():
-  return control.authentificaton(request.form)
+  if request.method == 'POST':
+    return control.authentificaton(request.form)
+  return "false"
 
 #ajout d'un marqueur
 @app.route('/add/marker', methods=('GET', 'POST'))
 def addMarker():
-  return control.addMarker(request.form)
+  if request.method == 'POST':
+    return control.addMarker(request.form)
+  return "false"
 
 #inscription d'un utilisateur
 @app.route('/add/user', methods=('GET', 'POST'))
 def addUser():
-  return control.addUser(request.form)
+  if request.method == 'POST':
+    return control.addUser(request.form)
+  return "false"
 
 
 
