@@ -40,15 +40,15 @@ def displayUser():
 		return jsonify(users=[item.serialize() for item in items])
 
 	print "user vide"
-	return "-1"
+	return jsonify(error="No user")
 
 	
 
 def authentification(form):
 	user = User.query.filter_by(pseudo=form['pseudo'], passw=form['passw']).first()
 	if user:
-		return str(user.id)
-	return "-1"
+		return jsonify(id=user.id, pseudo=user.pseudo)
+	return jsonify(error="authentification error")
 
 def addMarker(form):
 	print "addMarker"
@@ -56,12 +56,12 @@ def addMarker(form):
 		exist = Marker.query.filter_by(title=form['title'], lng=form['lng'], lat=form['lat']).first()
 		
 		if exist:
-			return "Already Exist"
+			return jsonify(error="already exists")
 
 		user = User.query.get(form['user'])
 
 		if not(user):
-			return "User doesn't exist"
+			return jsonify(error="user doesn't exist")
 		
 		marker = Marker(form['title'], float(form['lng']), float(form['lat']), form['user'], form['cathegorie'], form['description'])
 		
@@ -70,7 +70,7 @@ def addMarker(form):
 		
 		return jsonify(marker = marker.serialize) 
 		
-	return "Invalid Parameters"
+	return jsonify(error="invalid parameters")
 
 def addUser(form):
 	if (form['pseudo'] and form['passw']):
@@ -79,7 +79,7 @@ def addUser(form):
 
 		if exist:
 	
-			return "Already Exist"
+			return jsonify(error="already exist")
 
 		user = User(form['pseudo'], form['passw'])
 
@@ -88,7 +88,7 @@ def addUser(form):
 
 		return jsonify(id=user.id, pseudo=user.pseudo)
 
-	return "Invalid Parameters"
+	return jsonify(error="invalid parameters")
 
 
 

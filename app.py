@@ -25,8 +25,8 @@ def index():
   return "Hi Bitches"
 
 #Affichage des différents marqueurs enregistrés
-@app.route('/marker')
-@app.route('/marker/<cathegorie>')
+@app.route('/marker/')
+@app.route('/marker/<cathegorie>/')
 def marker(cathegorie = None):
   return control.marker(cathegorie)
 
@@ -40,21 +40,21 @@ def user():
 def auth():
   if request.method == 'POST':
     return control.authentificaton(request.form)
-  return "false"
+  return jsonify(error="false request")
 
 #ajout d'un marqueur
 @app.route('/add/marker', methods=('GET', 'POST'))
 def addMarker():
   if request.method == 'POST':
     return control.addMarker(request.form)
-  return "false"
+  return jsonify(error="false request")
 
 #inscription d'un utilisateur
 @app.route('/add/user', methods=('GET', 'POST'))
 def addUser():
   if request.method == 'POST':
     return control.addUser(request.form)
-  return "false"
+  return jsonify(error="false request")
 
 
 
@@ -63,27 +63,17 @@ def addUser():
 def test():
   if request.method == 'POST':
     return control.test(request.form)
-  return "false"
+  return jsonify(error="false request")
 
 @app.route('/useer')
 def displaye():
   users = Marker.query.all()
   return jsonify(users=[user.serialize() for user in users])
 
-"""@app.route('/test2', methods=('GET', 'POST'))
-def test2():
-  marker = Marker()
-  marker.title = "le titre"
 
-  db.session.add(marker)
-  db.session.commit()
-
-  return str(marker.id)"""
-
-
-"""@app.errorhandler(404)
+@app.errorhandler(404)
 def page_not_found(error):
-    return render_template('page_not_found.html'), 404"""
+    return jsonify(error="404"), 404
 
 if __name__ == '__main__':
   port = int(os.environ.get("PORT", 5000))
