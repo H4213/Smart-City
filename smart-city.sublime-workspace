@@ -104,14 +104,6 @@
 			}
 		},
 		{
-			"file": "app.py",
-			"settings":
-			{
-				"buffer_size": 1635,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "model/modele.py",
 			"settings":
 			{
@@ -160,6 +152,7 @@
 	},
 	"file_history":
 	[
+		"/home/leo/Documents/Smart-City/app.py",
 		"/home/leo/Documents/Smart-City/Serveur/smart-city.sublime-project",
 		"/home/leo/Documents/Smart-City/Serveur/templates/stripe.html",
 		"/home/leo/Documents/Smart-City/Serveur/model/form.py",
@@ -318,34 +311,6 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app.py",
-					"settings":
-					{
-						"buffer_size": 1635,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								289,
-								289
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
 				}
 			]
 		},
@@ -354,7 +319,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "model/modele.py",
 					"settings":
 					{
@@ -382,7 +347,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "templates/marker.html",
 					"settings":
 					{
@@ -408,7 +373,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "templates/user.html",
 					"settings":
 					{
