@@ -1,7 +1,7 @@
 {
 "user":[
 {% for user in users %}
-	{"id":"{{ str(user.id) }}", 
+	{"id":"{{ user.id }}", 
 	"pseudo":"{{ user.pseudo }}", 
 	"passw":"{{ user.passw }}"}	
 {% endfor %}

@@ -1,5 +1,6 @@
 from model import modele
 from model.modele import User, Marker
+from flask import Flask, flash, render_template, request, session
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -22,22 +23,26 @@ def marker(cathegorie):
 	else:
 		mes_Markers = Marker.query.all()
 
-	if mes_Markers:
-		return render_template('marker.html', markers=mes_Markers)
-	return "-1"
+	if not(mes_Markers):
+		print "Markers vides"
+
+	return render_template('marker.html', markers=mes_Markers)
 
 def displayUser():
-	print "displayUser()\n"
+	print "displayUser()"
 
 	users = User.query.all()
+
+	for user in users:
+		print user.pseudo
 
 	print "query faite"
 
 	if users :
-		print "users non vide\n"
+		print "users non vide"
 		return render_template('user.html', users = users)
 
-	print "user vide\n"
+	print "user vide"
 	return "-1"
 
 	
@@ -59,30 +64,23 @@ def addMarker(form):
 		db.session.add(marker)
 		db.session.commit()
 
-		return marker.id 
+		return str(marker.id) 
 		
 	return "Invalid Parameters"
 
 def addUser(form):
-	print "1"
 	if (form['pseudo'] and form['passw']):
-		print "2"
+
 		exist = User.query.filter_by(pseudo=form['pseudo']).first()
-		print "3"
+
 		if exist:
-			print "4"
+	
 			return "Already Exist"
-		print "5"
+
 		user = User(form['pseudo'], form['passw'])
 
-		print "6"
-
 		db.session.add(user)
-
-		print "6.2"
 		db.session.commit()
-
-		print "7"
 
 		return str(user.id) 
 
