@@ -22,7 +22,9 @@ def marker(cathegorie):
 	else:
 		mes_Markers = Marker.query.all()
 
-	return render_template('marker.html', markers=mes_Markers)
+	if mes_Markers:
+		return render_template('marker.html', markers=mes_Markers)
+	return "-1"
 
 def displayUser():
 	print "displayUser()\n"
@@ -42,7 +44,9 @@ def displayUser():
 
 def authentification(form):
 	user = User.query.filter_by(pseudo=form.pseudo, passw=form.passw).first()
-	return str(user.id)
+	if user:
+		return str(user.id)
+	return "-1"
 
 def addMarker(form):
 	if (form.title and form.user and form.lng and form.lat):
