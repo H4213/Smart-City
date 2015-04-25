@@ -43,38 +43,48 @@ def displayUser():
 	
 
 def authentification(form):
-	user = User.query.filter_by(pseudo=form.pseudo, passw=form.passw).first()
+	user = User.query.filter_by(pseudo=form['pseudo'], passw=form['passw']).first()
 	if user:
 		return str(user.id)
 	return "-1"
 
 def addMarker(form):
-	if (form.title and form.user and form.lng and form.lat):
-		exist = Marker.query.filter_by(title=form.title, lng=form.lng, lat=form.lat).first()
+	if (form['title'] and form['user'] and form['lng'] and form['lat']):
+		exist = Marker.query.filter_by(title=form['title'], lng=form['lng'], lat=form['lat']).first()
 
 		if exist:
 			return "Already Exist"
-		marker = Marker(form.idUser, form.title, form.cathegorie, form.description, form.lng, form.lat)
+		marker = Marker(form['idUser'], form['title'], form['cathegorie'], form['description'], form['lng'], form['lat'])
 
 		db.session.add(marker)
-		db.commit()
+		db.session.commit()
 
 		return marker.id 
 		
 	return "Invalid Parameters"
 
 def addUser(form):
-	if (form.pseudo and form.password):
-		exist = User.query.filter_by(pseudo=form.pseudo).first()
-
+	print "1"
+	if (form['pseudo'] and form['passw']):
+		print "2"
+		exist = User.query.filter_by(pseudo=form['pseudo']).first()
+		print "3"
 		if exist:
+			print "4"
 			return "Already Exist"
-		user = User(form.pseudo, form.password)
+		print "5"
+		user = User(form['pseudo'], form['passw'])
+
+		print "6"
 
 		db.session.add(user)
-		db.commit()
 
-		return user.id 
+		print "6.2"
+		db.session.commit()
+
+		print "7"
+
+		return str(user.id) 
 
 	return "Invalid Parameters"
 
