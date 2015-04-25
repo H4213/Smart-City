@@ -54,15 +54,23 @@ def authentification(form):
 	return "-1"
 
 def addMarker(form):
+	print "addMarker"
 	if (form['title'] and form['user'] and form['lng'] and form['lat']):
 		exist = Marker.query.filter_by(title=form['title'], lng=form['lng'], lat=form['lat']).first()
-
+		
 		if exist:
 			return "Already Exist"
-		marker = Marker(form['idUser'], form['title'], form['cathegorie'], form['description'], form['lng'], form['lat'])
 
+		user = User.query.get(form['user'])
+
+		if not(user):
+			return "User doesn't exist"
+		
+		marker = Marker(form['title'], float(form['lng']), float(form['lat']), form['user'], form['cathegorie'], form['description'])
+		
 		db.session.add(marker)
 		db.session.commit()
+		
 
 		return str(marker.id) 
 		

@@ -1,12 +1,13 @@
 {
 "marker":[
 {% for marker in markers %}
-	{"id":"{{ markers.id }}", 
-	"title":"{{ markers.title }}", 
-	"cathegorie":"{{ markers.cathegorie }}", 
-	"description":"{{ markers.description }}",
-	"lng":"{{ markers.lng }}",
-	"lat":"{{ markers.lat }}"}	
+	{"id":"{{ marker.id }}", 
+	"title":"{{ marker.title }}", 
+	"cathegorie":"{{ marker.cathegorie }}", 
+	"description":"{{ marker.description }}",
+	"lng":"{{ marker.lng }}",
+	"lat":"{{ marker.lat }}",
+	"user":"{{ marker.idUser }}"}	
 {% endfor %}
 ]
 }

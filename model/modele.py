@@ -25,6 +25,13 @@ class User(db.Model):
         self.pseudo = username
         self.passw = passw
 
+    def serialize(self):
+        return {
+            'id': self.id,
+            'pseudo': self.pseudo,
+            'passw': self.passw,
+        }
+
     #------------------------------------------------------------------
 
 class Marker(db.Model):
@@ -44,6 +51,17 @@ class Marker(db.Model):
         self.description = description
         self.lng = lng
         self.lat = lat
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'user': self.idUser,
+            'title': self.title,
+            'cathegorie': self.cathegorie,
+            'description': self.description,
+            'lng': self.lng,
+            'lat': self.lat,
+        }
     #------------------------------------------------------------------
  
 db.create_all()

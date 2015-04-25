@@ -6,7 +6,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 
 import os
-from flask import Flask, flash, render_template, request, session
+from flask import Flask, flash, render_template, request, session, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 
 from controler import control
@@ -65,6 +65,11 @@ def test():
     return control.test(request.form)
   return "false"
 
+@app.route('/useer')
+def displaye():
+  users = Marker.query.all()
+  return jsonify(users=[user.serialize() for user in users])
+
 """@app.route('/test2', methods=('GET', 'POST'))
 def test2():
   marker = Marker()
@@ -81,6 +86,6 @@ def page_not_found(error):
     return render_template('page_not_found.html'), 404"""
 
 if __name__ == '__main__':
+  app.run(debug=True)
   port = int(os.environ.get("PORT", 5000))
   app.run(host='0.0.0.0', port=port)
-  app.run(debug=True)
