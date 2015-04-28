@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"categ",
+				"category"
+			],
+			[
+				"ca",
+				"category"
+			],
+			[
+				"cat",
+				"cat11"
+			],
+			[
+				"de",
+				"description"
+			],
+			[
 				"ID",
 				"ID_EGAL"
 			],
@@ -99,7 +115,7 @@
 			"file": "app.py",
 			"settings":
 			{
-				"buffer_size": 1872,
+				"buffer_size": 2496,
 				"line_ending": "Unix"
 			}
 		},
@@ -107,7 +123,39 @@
 			"file": "controler/control.py",
 			"settings":
 			{
-				"buffer_size": 1493,
+				"buffer_size": 2444,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Test Html/testUser.html",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Test Html/AddUser.html",
+			"settings":
+			{
+				"buffer_size": 470,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/JSON.html",
+			"settings":
+			{
+				"buffer_size": 610,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Test Html/AddMarker",
+			"settings":
+			{
+				"buffer_size": 1321,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,7 +163,7 @@
 			"file": "model/modele.py",
 			"settings":
 			{
-				"buffer_size": 1686,
+				"buffer_size": 3352,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,7 +171,7 @@
 			"file": "templates/marker.html",
 			"settings":
 			{
-				"buffer_size": 267,
+				"buffer_size": 287,
 				"line_ending": "Unix"
 			}
 		},
@@ -131,7 +179,7 @@
 			"file": "templates/user.html",
 			"settings":
 			{
-				"buffer_size": 143,
+				"buffer_size": 138,
 				"line_ending": "Unix"
 			}
 		}
@@ -160,6 +208,7 @@
 	},
 	"file_history":
 	[
+		"/home/leo/Documents/Smart-City/testUser.html",
 		"/home/leo/Documents/Smart-City/app.py",
 		"/home/leo/Documents/Smart-City/Serveur/smart-city.sublime-project",
 		"/home/leo/Documents/Smart-City/Serveur/templates/stripe.html",
@@ -214,9 +263,28 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"athegorie",
+			"marker",
+			"Marker",
+			"Categorys",
+			"categorys",
+			"Cathegorie",
+			"cathegorie",
+			"cathegories",
+			"categories",
+			"Categorys",
+			"Cathegorie",
+			"cathegorie",
+			"marker",
+			"Marker",
+			"marker",
+			"Marker",
+			"return",
+			"print",
+			"form",
 			"Erreur R",
 			"cout",
 			"'id', ",
@@ -280,6 +348,18 @@
 		"regex": false,
 		"replace_history":
 		[
+			"ategory",
+			"pin",
+			"Pin",
+			"Categories",
+			"categories",
+			"Category",
+			"category",
+			"Categories",
+			"Category",
+			"category",
+			"pin",
+			"Pin"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -298,15 +378,15 @@
 					"file": "app.py",
 					"settings":
 					{
-						"buffer_size": 1872,
+						"buffer_size": 2496,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1355,
-								1355
+								1942,
+								1942
 							]
 						],
 						"settings":
@@ -316,7 +396,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 408.0,
+						"translation.y": 1020.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -326,15 +406,15 @@
 					"file": "controler/control.py",
 					"settings":
 					{
-						"buffer_size": 1493,
+						"buffer_size": 2444,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								128,
-								128
+								69,
+								69
 							]
 						],
 						"settings":
@@ -343,7 +423,63 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 561.0,
+						"translation.y": 612.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Test Html/testUser.html",
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Test Html/AddUser.html",
+					"settings":
+					{
+						"buffer_size": 470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -351,23 +487,79 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "model/modele.py",
+					"buffer": 4,
+					"file": "templates/JSON.html",
 					"settings":
 					{
-						"buffer_size": 1686,
+						"buffer_size": 610,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								138,
+								138
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Test Html/AddMarker",
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								574,
+								574
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "model/modele.py",
+					"settings":
+					{
+						"buffer_size": 3352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3258,
+								3258
 							]
 						],
 						"settings":
@@ -383,19 +575,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 7,
 					"file": "templates/marker.html",
 					"settings":
 					{
-						"buffer_size": 267,
+						"buffer_size": 287,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								267,
-								267
+								1,
+								1
 							]
 						],
 						"settings":
@@ -409,19 +601,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 8,
 					"file": "templates/user.html",
 					"settings":
 					{
-						"buffer_size": 143,
+						"buffer_size": 138,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								120,
-								120
+								53,
+								53
 							]
 						],
 						"settings":
@@ -465,7 +657,7 @@
 		"cols":
 		[
 			0.0,
-			0.531822051937,
+			0.513201362282,
 			1.0
 		],
 		"rows":
@@ -485,7 +677,7 @@
 	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
